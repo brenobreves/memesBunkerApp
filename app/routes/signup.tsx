@@ -41,8 +41,9 @@ export default function SignUpPage() {
         body: JSON.stringify(reqBody)
       }
     )
+    const resData = JSON.parse(await response.text())
     if(response.status !== 200){
-      alert(`${await response.text()}`)
+      alert(`${resData.message || resData}`)
       return
     }
     navigate("/")
