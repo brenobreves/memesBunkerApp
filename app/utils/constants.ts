@@ -1,0 +1,1 @@
+export const PUBLIC_API = "https://memesbunkerapi.onrender.com"
