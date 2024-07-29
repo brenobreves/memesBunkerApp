@@ -28,7 +28,6 @@ type Meme = {
 }
 
 export async function loader({ request }: LoaderArgs) {
-  console.log(request)
   const cookieHeader = request.headers.get("Cookie");
   const cookies = parse(cookieHeader || "");
   const token = cookies.authToken;
