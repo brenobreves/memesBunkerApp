@@ -7,6 +7,7 @@ import {
 } from "@remix-run/react";
 import "./tailwind.css";
 import { TokenProvider } from "./contexts/AuthContext";
+import SetTokenCookie from "./components/SetCookie";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -19,6 +20,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <TokenProvider>
+        <SetTokenCookie/>
         {children}
         <ScrollRestoration />
         <Scripts />
