@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./tailwind.css";
+import { TokenProvider } from "./contexts/AuthContext";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,9 +18,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <TokenProvider>
         {children}
         <ScrollRestoration />
         <Scripts />
+        </TokenProvider>
       </body>
     </html>
   );

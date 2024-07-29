@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
+import { Link, useNavigate } from "@remix-run/react";
+import { useEffect } from "react";
 import HomeLink from "~/components/HomeLink";
+import { useToken } from "~/contexts/AuthContext";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,11 +12,17 @@ export const meta: MetaFunction = () => {
 };
 
 export default function HomePage() {
+  const navigate = useNavigate()
+  const { token } = useToken()
+
+  useEffect(() => {
+    if(!token) navigate("/")
+  },[])
 
   return (
-    <div className="flex flex-col justify-center items-center py-[10dvh] px-[10dvw] bg-sky-500 h-[100dvh] w-[100dvw]">
+    <div className="flex flex-col justify-center items-center py-[10dvh] px-[10dvw] bg-sky-500 h-full w-full">
       <img src="/meme-logo-removebg-preview.png"/>
-      <div className="flex gap-8 p-8 bg-slate-200 rounded-3xl">
+      <div className="flex gap-8 p-8 bg-slate-200 rounded-3xl flex-wrap w-full lg:w-[50%] h-full">
         <HomeLink to="/create">
           Salvar novo meme
         </HomeLink>

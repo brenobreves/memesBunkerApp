@@ -8,7 +8,7 @@ type HomeLinkProps = {
 export default function HomeLink({to, children}: PropsWithChildren<HomeLinkProps>) {
 
   return (
-    <Link to={to} className="w-full h-full py-12 px-8 bg-sky-950 text-slate-300 rounded-3xl flex justify-center items-center text-center">
+    <Link to={to} className="w-full h-40 py-[5%] px-8 bg-sky-950 text-slate-300 rounded-3xl flex justify-center items-center text-center">
         {children}
     </Link>
   )

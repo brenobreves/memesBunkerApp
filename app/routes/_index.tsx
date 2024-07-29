@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Form from "~/components/Form";
 import Input from "~/components/Input";
 import { PUBLIC_API } from "~/utils/constants";
+import { useToken } from "~/contexts/AuthContext";
 
 export const meta: MetaFunction = () => {
   return [
@@ -14,6 +15,7 @@ export const meta: MetaFunction = () => {
 
 export default function SignUpPage() {
   const [form, setForm] = useState({email:"" , senha:""})
+  const { setToken } = useToken()
 
   const navigate = useNavigate()
   function handleForm(e: React.ChangeEvent<HTMLInputElement>){
@@ -41,6 +43,8 @@ export default function SignUpPage() {
       alert(`${resData.message || resData}`)
       return
     }
+    const token = resData.auth
+    setToken(token)
     navigate("/home")
   }
   return (
