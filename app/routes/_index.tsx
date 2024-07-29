@@ -48,7 +48,7 @@ export default function SignUpPage() {
     navigate("/home")
   }
   return (
-    <div className="flex flex-col justify-center items-center py-[10dvh] px-[10dvw] bg-sky-500 h-[100dvh] w-[100dvw]">
+    <div className="flex flex-col justify-center items-center py-[10dvh] px-[10dvw] bg-sky-500 h-full w-full min-h-[100dvh]">
         <h1 className="uppercase w-full text-center text-5xl text-slate-200">memes bunker</h1>
         <img src="/meme-logo-removebg-preview.png"/>
       <Form handlerFunction={handleSubmit}>
