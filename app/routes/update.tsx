@@ -26,7 +26,7 @@ interface ActionData {
 export const meta: MetaFunction = () => {
   return [
     { title: "memesBunker" },
-    { name: "Meus Memes", content: "Saved_memes_page" },
+    { name: "Update Memes", content: "Update_memes_page" },
   ];
 };
 
@@ -104,7 +104,7 @@ export async function loader({ request }: LoaderArgs) {
   }
 }
 
-export default function SavedMemesPage() {
+export default function UpdateMemesPage() {
   const { token } = useToken()
   const memes = useLoaderData<Meme[]>()
   const [selectedMemeData, setSelectedMemeData] = useState({id:"", link:"", type:""})

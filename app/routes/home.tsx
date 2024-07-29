@@ -7,7 +7,7 @@ import { useToken } from "~/contexts/AuthContext";
 export const meta: MetaFunction = () => {
   return [
     { title: "memesBunker" },
-    { name: "Home", content: "Home page" },
+    { name: "Home", content: "Home_page" },
   ];
 };
 
