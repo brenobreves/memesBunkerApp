@@ -68,7 +68,7 @@ export default function createMemePage() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center py-[10dvh] px-[10dvw] bg-sky-500 h-[100dvh] w-[100dvw]">
+    <div className="flex flex-col justify-center items-center py-[10dvh] px-[10dvw] bg-sky-500 h-full w-full">
         <img src="/meme-logo-removebg-preview.png"/>
       <Form method="POST" className="bg-sky-700 flex flex-col gap-4 p-4 rounded-lg max-w-[700px] mb-4">
         <Input name="url" value={form.url} onChange={handleForm} placeholder="url" type="text"/>

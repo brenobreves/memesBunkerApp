@@ -112,7 +112,7 @@ export default function SavedMemesPage() {
   }
 
   return (
-    <div className="flex flex-col justify-start items-center py-[10dvh] px-[10dvw] bg-sky-500 h-[100dvh] w-[100dvw]">
+    <div className="flex flex-col justify-start items-center py-[10dvh] px-[10dvw] bg-sky-500 h-full w-full">
       <h1 className="uppercase w-full text-center text-5xl text-slate-200">Selecione um meme</h1>
       <img src="/meme-logo-removebg-preview.png" alt="Meme Logo" />
 

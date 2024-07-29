@@ -70,7 +70,7 @@ export default function SavedMemesPage() {
   },[])
 
   return (
-    <div className="flex flex-col justify-start items-center py-[10dvh] px-[10dvw] bg-sky-500 h-[100dvh] w-[100dvw]">
+    <div className="flex flex-col justify-start items-center py-[10dvh] px-[10dvw] bg-sky-500 h-full w-full">
         <img src="/meme-logo-removebg-preview.png"/>
 
       <Link className="text-sky-900 w-[200px] text-center p-4 bg-slate-300 rounded-xl" to="/home">
